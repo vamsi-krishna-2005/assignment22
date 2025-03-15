@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    // other plugins...
+    id "org.sonarqube" version "3.5.0.2730"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "adservice"
+        property "sonar.projectName", "Ad Service"
+        property "sonar.host.url", "http://localhost:9000/"  // update with your SonarQube server URL
+        // If you don't configure the token here, you can pass it via the command-line as you've been doing
+    }
+}
